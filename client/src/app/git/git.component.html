@@ -1,0 +1,41 @@
+<div class="app">
+  <div class="git">
+    <div class="repository">
+      <div class="commands">
+        <div class="add">
+          <form
+            action="#"
+            (ngSubmit)="addCommit(addForm.value)"
+            #addForm="ngForm"
+          >
+            <h1>Add Commit</h1>
+
+            <h2>Author</h2>
+            <input ngModel name="commitAuthor" type="text" required />
+            <h2>Message</h2>
+            <input ngModel name="commitMessage" type="text" required />
+            <button type="submit" id="addButton">Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="logs">
+      <h1 style="margin-left: 25%">Git repository's log</h1>
+      <div class="commits">
+        <div *ngFor="let commit of commits" class="commit">
+          <p>commit {{ commit.commitId }}</p>
+          <p>Author : {{ commit.author }}</p>
+          <p>Date : {{ commit.commitDate }}</p>
+          <p>&emsp;{{ commit.message }}</p>
+        </div>
+      </div>
+      <mat-paginator
+        [pageSizeOptions]="pageSizeOptions"
+        [pageSize]="pageSize"
+        [length]="totalCommits"
+        (page)="onPageChange($event)"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>

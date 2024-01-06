@@ -1,0 +1,66 @@
+.git {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.repository {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.commands {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.commands > div {
+  margin-right: 2%;
+}
+.add {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 5%;
+  border-style: solid;
+}
+
+.findById {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 5%;
+  border-style: solid;
+}
+#findByIdButton {
+  margin-top: 10%;
+}
+#addButton {
+  margin-top: 10%;
+}
+.delete {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 5%;
+  border-style: solid;
+}
+#deleteButton {
+  margin-top: 10%;
+}
+
+.commits {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  padding: 2% 2% 0% 2%;
+  width: 500px;
+  max-height: 450px;
+  overflow-y: auto;
+}
+.commit {
+  margin-bottom: 5%;
+  padding: 5%;
+  border-style: solid;
+}
